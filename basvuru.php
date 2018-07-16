@@ -102,7 +102,8 @@ if($_POST)
             if(mysqli_query($conn,$gonder))
             {
 
-                echo "Başvurunuz gönderildi.";
+
+                echo " <br><font   color='#191970'> Başvurunuz gönderildi. </font>";
                 header('REFRESH:2; URL="basvuru.php" ');
 
             }

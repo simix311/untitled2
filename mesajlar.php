@@ -112,15 +112,15 @@ if($aa->num_rows>0)
 
 
         $degisken="SELECT * FROM basvuru WHERE gonderilen='".$_POST["gonderilen"]."' ";
-        echo "<td>".$aaa["gonderilen"]."</td>";
-        echo "<td>".$aaa["mesaj"]."</td>";
+     //   echo "<td>".$aaa["gonderilen"]."</td>";
+      //  echo "<td>".$aaa["mesaj"]."</td>";
 
 
     }
 }
 
 else{
-    echo "baglantı_kurulamadı";
+    echo "else";
 }
 
 
