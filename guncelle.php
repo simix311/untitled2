@@ -53,8 +53,8 @@ include ("ayar.php");
                                 <span class="caret"></span></button>
                             <ul class="dropdown-menu">
                                 <li><a href="basvuru.php">Başvuru yap</a></li>
-                                <li><a href="ilan.php">İlan ver</a></li>
-                                <li><a href="mesajlar.php">Mesajlar</a></li>
+                                <li><a href="ilan.php">İlan ver/ara</a></li>
+                               /<li><a href="fmesajlar.php">Mesajlar</a></li>
 
 
 

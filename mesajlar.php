@@ -25,10 +25,10 @@ include ("ayar.php");
         <br>  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Hesap ayarları
             <span class="caret"></span></button>
         <ul class="dropdown-menu">
-            <li><a href="panel.php">Profil</a></li>
-            <li><a href="guncelle.php">Güncelle</a></li>
-            <li><a href="hesapsil.php">Hesap sil</a></li>
-            <li><a href="cikis.php">Çıkış yap</a></li>
+            <li><a href="firmapanel.php">Profil</a></li>
+            <li><a href="fgüncel.php">Güncelle</a></li>
+            <li><a href="fhesapsil.php">Hesap sil</a></li>
+            <li><a href="fcikis.php">Çıkış yap</a></li>
 
 
         </ul>
@@ -44,9 +44,9 @@ include ("ayar.php");
                 <br><br>     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Durum bilgisi
                 <span class="caret"></span></button>
                 <ul class="dropdown-menu">
-                    <li><a href="basvuru.php">Başvuru yap</a></li>
-                    <li><a href="ilan.php">İlan ver</a></li>
-                    <li><a href="mesajlar.php">Mesajlar</a></li>
+
+                    <li><a href="filan.php">İlan ver/ara</a></li>
+                   <li><a href="fmesajlar.php">Mesajlar</a></li>
 
 
 
@@ -59,62 +59,41 @@ include ("ayar.php");
 <div class="container">
     <h2><STRONG> MESAJLAR </STRONG></h2> <BR>
 
-    <table class="table table-striped">
-        <thead>
-        <tr>
-         <th>İsim</th>
-            <th>Soyisim</th>
-            <th>Email</th>
-            <th>açıklama</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>adadasdasdadddsd</td>
-            <td>Doeasdasdasdasdd</td>
-            <td>john@example.com</td>
-            <td>john@example.com</td>
-        </tr>
-        <tr>
-            <td>Maraaaaaaaaaaaay</td>
-            <td>Moeasdasdasdadsa</td>
-            <td>mary@example.com</td>
-            <td>john@example.com</td>
-        </tr>
-        <tr>
-            <td>Julyadadadadasda</td>
-            <td>Dooleadasdasdddy</td>
-            <td>july@example.com</td>
-            <td>john@example.com</td>
-        </tr>
-        <tr>
-
-        </tr>
-        </tbody>
-    </table>
 </div>
 
 </body>
+
 </html>
 <?php
-//$cek="SELECT * FROM cv  ";
+
+$fmail="";
 
 
-$mesaj="SELECT * FROM  basvuru WHERE gonderilen= '".$_SESSION['gonderilen']."' ";
-$aa=$conn->query($mesaj);
+$alınan="SELECT * FROM basvuru WHERE gonderilen='".$_SESSION["fmail"]."' " ;
+echo "<table class='table table-striped'>";
+echo "<thead>";
+echo "<tr>";
+echo "<th>Email</th>";
+echo "<th>İsim</th>";
+echo "<th>Soyisim</th>";
+echo "<th>Açıklama</th>";
+echo "</tr>";
+
+$aa=$conn->query($alınan);
 if($aa->num_rows>0)
 {
-        $_SESSION["gonderilen"]=$aa["gonderilen"];
-
-
     while($aaa=$aa->fetch_assoc())
     {
+        $fmail=$aaa["email"];
 
-
-        $degisken="SELECT * FROM basvuru WHERE gonderilen='".$_POST["gonderilen"]."' ";
-     //   echo "<td>".$aaa["gonderilen"]."</td>";
-      //  echo "<td>".$aaa["mesaj"]."</td>";
-
+        echo "</thead>";
+        echo "<tbody>";
+        echo "<tr>";
+        echo "<td>".$aaa["email"]."</td>";
+        echo "<td>".$aaa["isim"]."</td>";
+        echo "<td>".$aaa["soyisim"]."</td>";
+        echo "<td>".$aaa["mesaj"]."</td>";
+        echo "</tr>";
 
     }
 }
@@ -126,3 +105,6 @@ else{
 
 
 ?>
+
+
+

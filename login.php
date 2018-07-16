@@ -17,11 +17,11 @@ if($aa->num_rows>0)
         $_SESSION["sifre"]=$row["sifre"];
         $_SESSION["email"]=$row["email"];
         $_SESSION["ID"]=$row["ID"];
-        $_SESSION["same"]=$row["same"];
         $_SESSION["yas"]=$row["yas"];
         $_SESSION["isim"]=$row["isim"];
         $_SESSION["soyisim"]=$row["soyisim"];
         $_SESSION["sonp"]=$row["sonp"];
+
 
 
         header("location:panel.php");

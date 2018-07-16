@@ -12,15 +12,15 @@
 <body>
 
 <div class="container">
-    <h2>Üye giris </h2>
-    <form action="login.php" method="post" >
+    <h2>Firma giris </h2>
+    <form action="firmagiris.php" method="post" >
         <div class="form-group">
-            <label for="email">Kullanıcı adı</label>
-            <input type="text" class="form-control"  name="kulad">
+            <label for="email">Firma mail</label>
+            <input type="email" class="form-control"  name="fmail">
         </div>
         <div class="form-group">
             <label for="pwd">Sifre</label>
-            <input type="password" class="form-control"  name="sifre">
+            <input type="password" class="form-control"  name="fsifre">
         </div>
 
         <button type="submit" class="btn btn-default" name="gir">Submit</button>
@@ -29,6 +29,7 @@
 
 </body>
 </html>
+
 
 
 

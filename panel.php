@@ -56,8 +56,8 @@ include ("ayar.php");
                                 <span class="caret"></span></button>
                             <ul class="dropdown-menu">
                                 <li><a href="basvuru.php">Başvuru yap</a></li>
-                                <li><a href="ilan.php">İlan ver</a></li>
-                                <li><a href="mesajlar.php">Mesajlar</a></li>
+                                <li><a href="ilan.php">İlan ver/ara</a></li>
+                               <li><a href="fmesajlar.php">Mesajlar</a></li>
 
 
 
@@ -71,8 +71,8 @@ include ("ayar.php");
             <tr><td>Soyisim</td><td><input type="text" name="soyisim"  value="<?php echo  $_SESSION['soyisim']; ?>" >      </td></tr>
             <tr><td>Yaş</td><td><input type="text" name="yas"  value="<?php echo  $_SESSION['yas']; ?>" >      </td></tr>
            <tr><td>Son pozisyon</td><td><input type="text" name="sonp" value="<?php echo $_SESSION['sonp']; ?>"> </td></tr>
-            <tr><td>Üyelik türü</td><td><input type="text" name="same" value="<?php echo $_SESSION['same']; ?>" ></td>
-            </tr>
+
+
 
 
     </fieldset>

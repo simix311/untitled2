@@ -15,6 +15,7 @@ include ("ayar.php");
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+
 </head>
 <body>
 <form method="post" action="ilan.php">
@@ -47,8 +48,8 @@ include ("ayar.php");
             <span class="caret"></span></button>
         <ul class="dropdown-menu">
             <li><a href="basvuru.php">Başvuru yap</a></li>
-            <li><a href="ilan.php">İlan ver</a></li>
-            <li><a href="mesajlar.php">Mesajlar</a></li>
+            <li><a href="ilan.php">İlan ver/ara</a></li>
+            <li><a href="fmesajlar.php">Mesajlar</a></li>
 
 
 
@@ -62,13 +63,12 @@ include ("ayar.php");
     <h2><STRONG> İş ilanları </STRONG></h2> <BR>
 
 
-    <br>
-    İş-mail   <input type="email" name="gonderilen" value=" <?php echo  $_SESSION['email']; ?> ">
-    İş gereksinimi  <input type="text" name="mesaj">
-    <button type="submit" class="btn btn-primary" name="cv">Gönder</button>
 
-</div>
+
+
 </form>
+
+
 </body>
 </html>
 <?php
@@ -137,3 +137,4 @@ if($goster->num_rows>0)
 
 
 ?>
+

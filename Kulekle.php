@@ -52,16 +52,10 @@ include("ayar.php");
             <tr>
                 <td>e-posta bildirimleri <input type="checkbox" name="oke"></td>
                 <td>sms bildirimleri <input type="checkbox" name="okey"></td>
+            </tr>
 
-            </tr>
-            <tr><td>iş veren üyeligi</td> <td><input type="radio" name="same" value="iş veren üyelik"> </td>
-            </tr>
-            <tr>
 
-                <td>  normal üyelik</td> <td>
-                    <input type="radio" name="same" value="normal üyelik">
-                </td>
-            </tr>
+
 
             <tr><td></td>
                 <td>
@@ -98,7 +92,10 @@ if($_POST)
     $sonp=$_POST["sonp"];
     $oke=$_POST["oke"];
     $okey=$_POST["okey"];
-    $same=$_POST["same"];
+
+
+
+
     if($_POST["isim"]=="")
     {
         echo "Bu alan boş olamaz.";
@@ -131,15 +128,12 @@ if($_POST)
     {
         echo "Bu alan boş olamaz.";
     }
-    else if($_POST["same"]=="")
-    {
-        echo "Bu alan boş olamaz.";
-    }
+
 
     else
     {
 
-        $ekle ="INSERT INTO uyelik(isim,soyisim,yas,email,kulad,sifre,ayni,sonp,oke,okey,same) values ('$isim','$soyisim','$yas','$email','$kulad','$sifre','$ayni','$sonp','$oke','$okey','$same')";
+        $ekle ="INSERT INTO uyelik(isim,soyisim,yas,email,kulad,sifre,ayni,sonp,oke,okey,same) values ('$isim','$soyisim','$yas','$email','$kulad','$sifre','$ayni','$sonp','$oke','$okey')";
         echo "<br> <br> Kaydınız oluşturuldu.Ana sayfa`ya dönülüyor. ";
         header('REFRESH:2; URL="anasayfa.php" ');
 
