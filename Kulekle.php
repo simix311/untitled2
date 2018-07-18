@@ -2,80 +2,73 @@
 include("ayar.php");
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Bootstrap Example</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="main.css" type="text/css" >
-</head>
-<body>
-<form action="" method="post">
-    <fieldset >
-        <legend>ÜYELİK FORMU</legend>
-        <table cellpadding="3" cellspacing="3">
-
-
-            <tr>
-                <td>isim</td>
-                <td><input type="text" name="isim" </td>
-            </tr>
-            <tr>
-                <td>soyisim</td> <td><input type="text" name="soyisim" ></td>
-            </tr>
-            <tr>
-                <td>yaş</td>
-                <td>
-                    <input type="text" name="yas">
-                </td>
-            </tr>
-            <tr>
-                <td>email</td> <td><input type="email" name="email"></td>
-            </tr>
-            <tr><td>kullanıcı adı</td> <td>
-                    <input type="text" name="kulad" >
-                </td></tr>
-            <tr>
-                <td>sifre</td> <td><input type="password" name="sifre"></td>
-            </tr>
-            <tr>
-                <td>iş tecrübesi</td><td> <input type="radio" name="ayni"  value="var"  > var
-                    <input  type="radio" name="ayni" value="yok" > yok  </td>
-            </tr>
-            <tr>
-                <td>son pozisyonun</td> <td><input type="text" name="sonp"> </td>
-            </tr>
-            <tr>
-                <td>e-posta bildirimleri <input type="checkbox" name="oke"></td>
-                <td>sms bildirimleri <input type="checkbox" name="okey"></td>
-            </tr>
 
 
 
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+    <form action="" method="post">
+        <div class="container">
+            <h2>Standart Üyelik Kaydı</h2>
 
-            <tr><td></td>
-                <td>
-                    <div class="container">
-                        <button type="submit" class="btn btn-warning" value="üyeliği tamamla" name="üyelik">Üyeliği tamamla</button>
-                    </div>
+            <div class="form-group">
+                <label for="email">İsim:</label>
+                <input type="text" class="form-control" id="email"   name="isim">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Soyisim:</label>
+                <input type="text" class="form-control" id="pwd"  name="soyisim">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Yaş:</label>
+                <input type="text" class="form-control" id="pwd" name="yas">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Email:</label>
+                <input type="email" class="form-control" id="pwd"   name="email">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Kullanıcı Adı:</label>
+                <input type="text" class="form-control" id="pwd"  name="kulad">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Sifre:</label>
+                <input type="password" class="form-control" id="pwd"  name="sifre">
+            </div>
+            <div class="form-group">
+                <label for="pwd">İş tecrübesi:</label>
+                <input type="radio"   id="pwd"  name="ayni" value="var"> var
+                <input type="radio"   id="pwd"  name="ayni" value="yok"> yok
+
+            </div>
+            <div class="form-group">
+                <label for="pwd">Son Pozisyonu:</label>
+                <input type="text" class="form-control" id="pwd"   name="sonp">
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" name="oke"> Eposta bildirimleri</label>
+
+                <label><input type="checkbox" name="okey">Sms bildirimleri</label>
+            </div>
+            <button type="submit" class="btn btn-default" name="uyelik">Üyeligi tamamla</button>
+
+        </div>
+    </form>
+    </body>
+    </html>
 
 
 
-                </td>
-            </tr>
 
-        </table>
-    </fieldset>
-</form>
-
-
-
-</body>
-</html>
 
 <?php
 
@@ -88,10 +81,10 @@ if($_POST)
     $email=$_POST["email"];
     $kulad=$_POST["kulad"];
     $sifre=$_POST["sifre"];
-    $ayni=$_POST["ayni"];
+    $ayni=$_POST["ayni"];//
     $sonp=$_POST["sonp"];
-    $oke=$_POST["oke"];
-    $okey=$_POST["okey"];
+    $oke=$_POST["oke"];//
+    $okey=$_POST["okey"];//
 
 
 
@@ -133,15 +126,15 @@ if($_POST)
     else
     {
 
-        $ekle ="INSERT INTO uyelik(isim,soyisim,yas,email,kulad,sifre,ayni,sonp,oke,okey,same) values ('$isim','$soyisim','$yas','$email','$kulad','$sifre','$ayni','$sonp','$oke','$okey')";
-        echo "<br> <br> Kaydınız oluşturuldu.Ana sayfa`ya dönülüyor. ";
-        header('REFRESH:2; URL="anasayfa.php" ');
+        $ekle ="INSERT INTO uyelik(isim,soyisim,yas,email,kulad,sifre,ayni,sonp,oke,okey) values ('$isim','$soyisim','$yas','$email','$kulad','$sifre','$ayni','$sonp','$oke','$okey')";
+
 
 
         if(mysqli_query($conn,$ekle))
         {
 
-
+            echo "<br> <br> Kaydınız oluşturuldu.Ana sayfa`ya dönülüyor. ";
+            header('REFRESH:2; URL="anasayfa.php" ');
 
         }
         else

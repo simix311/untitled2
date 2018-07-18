@@ -28,7 +28,7 @@ include ("ayar.php");
             <li><a href="firmapanel.php">Profil</a></li>
             <li><a href="fgüncel.php">Güncelle</a></li>
             <li><a href="fhesapsil.php">Hesap sil</a></li>
-            <li><a href="fcikis.php">Çıkış yap</a></li>
+            <li><a href="cikis.php">Çıkış yap</a></li>
 
 
         </ul>
@@ -46,7 +46,7 @@ include ("ayar.php");
                 <ul class="dropdown-menu">
 
                     <li><a href="filan.php">İlan ver/ara</a></li>
-                   <li><a href="fmesajlar.php">Mesajlar</a></li>
+                   <li><a href="mesajlar.php">Mesajlar</a></li>
 
 
 

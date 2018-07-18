@@ -17,7 +17,7 @@ include ("ayar.php");
 
     </head>
     <body>
-    <form method="post" action="filan.php">
+    <form    method="post"  ">
 
 
         <div class="container">
@@ -63,14 +63,33 @@ include ("ayar.php");
 
 
             <br>
-            İş-mail   <input type="email" name="gonderilen" value=" <?php echo  $_SESSION['fmail']; ?> ">
-            İş gereksinimi  <input type="text" name="mesaj">
-            <button type="submit" class="btn btn-primary" name="cv">Gönder</button>
+            <div class="form-group">
+                <label for="email">Firma Email Adresi:</label>
+                <input type="email" class="form-control" id="email"    name="gonderilen"     value=" <?php echo  $_SESSION['fmail']; ?> "     >
+            </div>
+
+            <div class="form-group">
+                <label for="email">İş gereksinimi:</label>
+                <input type="text" class="form-control" id="email"    name="mesaj"   >
+            </div>
+            <button type="submit" name="cv" class="btn btn-default" value="gonder">Gönder</button>
+
+
+
+
 
         </div>
+
+
+
+
     </form>
     </body>
     </html>
+
+
+
+
 <?php
 
 $gonderilen=$mesaj="";

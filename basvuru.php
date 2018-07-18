@@ -2,6 +2,7 @@
 session_start();
 include ("ayar.php");
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,18 +15,10 @@ include ("ayar.php");
 <body>
 
 
-<form  action=" "  method="POST">
-    <fieldset>
-
-        <legend><strong>KULLANICI PANELİ</strong></legend>
-        <table cellspacing="3" cellpadding="3"  >
-
-
-
-            <h4><strong> Başvuru gönder</strong></h4>
-
-            <tr><td>Firma email adresi</td><td><input type="email" name="gonderilen"    ></td>
-            <td>
+<form action=" " method="post">
+    <div class="container">
+        <h3>Başvuru gönder</h3>
+        <tr> <td>
                 <div class="container">
 
 
@@ -37,48 +30,62 @@ include ("ayar.php");
                             <li><a href="guncelle.php">Güncelle</a></li>
                             <li><a href="hesapsil.php">Hesap sil</a></li>
                             <li><a href="cikis.php">Çıkış yap</a></li>
+                        </ul>
+                    </div>
+                </div></td>
+            <td>        <div class="container">
+
+
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Durum bilgisi
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="basvuru.php">Başvuru yap</a></li>
+                            <li><a href="ilan.php">İlan ver/ara</a></li>
+                            <li><a href="fmesajlar.php">Mesajlar</a></li>
+
 
 
                         </ul>
                     </div>
                 </div>
-
-
-
             </td>
-            </tr>
-            <tr><td>İsim</td><td><input type="text" name="isim" value="<?php echo  $_SESSION['isim']; ?>"></td>
-            </tr>
-            <tr><td>Soyisim</td><td><input type="text" name="soyisim" value="<?php echo  $_SESSION['soyisim']; ?>" > </td>  <td><div class="container">
 
 
-                        <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Durum bilgisi
-                                <span class="caret"></span></button>
-                            <ul class="dropdown-menu">
-                                <li><a href="basvuru.php">Başvuru yap</a></li>
-                                <li><a href="ilan.php">İlan ara/ver</a></li>
-                               <li><a href="fmesajlar.php">Mesajlar</a></li>
+        </tr>
+        <br>
+        <br>
+
+        <div class="form-group">
+            <label for="email">Firma Email Adresi:</label>
+            <input type="email" class="form-control" id="email"    name="gonderilen"   >
+        </div>
+        <div class="form-group">
+            <label for="pwd">İsim:</label>
+            <input type="text" class="form-control" id="pwd"   name="isim" value="<?php echo  $_SESSION['isim']; ?>   " >
+        </div><div class="form-group">
+            <label for="pwd">Soyisim:</label>
+            <input type="text" class="form-control" id="pwd"   name="soyisim" value=" <?php echo  $_SESSION['soyisim']; ?>  " >
+        </div><div class="form-group">
+            <label for="pwd">Email:</label>
+            <input type="email" class="form-control" id="pwd"   name="email"  value=" <?php echo  $_SESSION['email']; ?>  ">
+        </div>
+        <label for="pwd">Mesaj:</label>
+        <div class="form-group">
+
+            <textarea  rows="4" cols="50" name="mesaj"></textarea>
+
+        </div>
+        <button type="submit" name="basvuru" class="btn btn-default" value="gonder">Gönder</button>
+    </div>
 
 
 
-                            </ul>
-                        </div>
-                    </div></td>
-            </tr>
-            <tr><td>Email</td><td><input type="email" name="email" value="<?php echo  $_SESSION['email']; ?>" </td></tr>
-            <tr><td>Mesaj</td><td><textarea  rows="4" cols="50" name="mesaj"></textarea></td></tr>
-            <tr><td></td><td>   <button type="submit" class="btn btn-primary" name="basvuru" value="Gönder">Gönder</button></td></tr>
-
-
-
-
-            <table>
-    </fieldset>
 </form>
-
 </body>
 </html>
+
+
 <?php
 
 if($_POST)

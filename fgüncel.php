@@ -16,26 +16,14 @@ include ("ayar.php");
 <body>
 
 
-<form  action=" "  method="POST">
-    <fieldset>
-
-        <legend><strong>KULLANICI PANELİ</strong></legend>
-        <table cellspacing="3" cellpadding="3"  >
-
-
-
-            <h4><strong>Firma Profil bilgilerini güncelle</strong></h4>
-            <div class="container"> </div>
+<form action=" " method="POST">
+    <div class="container">
+        <h3>Profil Bilgileri Güncelle</h3>
+        <tr> <td>
+                <div class="container">
 
 
-            </div>
-
-            </td>
-
-
-
-            </tr>
-            <tr><td>Kullanıcı adı</td><td> <input type="text" name="fulad" value="<?php echo  $_SESSION['fulad']; ?>" ></td>  <td>    <div class="dropdown">
+                    <div class="dropdown">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Hesap ayarları
                             <span class="caret"></span></button>
                         <ul class="dropdown-menu">
@@ -43,45 +31,59 @@ include ("ayar.php");
                             <li><a href="fgüncel.php">Güncelle</a></li>
                             <li><a href="fhesapsil.php">Hesap sil</a></li>
                             <li><a href="fcikis.php">Çıkış yap</a></li>
+                        </ul>
+                    </div>
+                </div></td>
+            <td>        <div class="container">
+
+
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Durum bilgisi
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+
+                            <li><a href="filan.php">İlan ver/ara</a></li>
+                            <li><a href="mesajlar.php">Mesajlar</a></li>
+
 
 
                         </ul>
                     </div>
+                </div>
+            </td>
+
+
+        </tr><br>
+
+        <div class="form-group">
+            <label for="text">Kullanıcı Adı:</label>
+            <input type="text" class="form-control" id="email"    name="fulad" value="<?php echo  $_SESSION['fulad']; ?>" >
+
+
+        </div>
+        <div class="form-group">
+            <label for="pwd">Şifre:</label>
+            <input type="text" class="form-control" id="pwd"   name="fsifre" value="<?php echo  $_SESSION['fsifre']; ?>   " >
+        </div><div class="form-group">
+            <label for="pwd">Email:</label>
+            <input type="email" class="form-control" id="pwd"   name="fmail" value=" <?php echo  $_SESSION['fmail']; ?>  " >
+        </div>
 
 
 
+        <button type="submit" name="zxc" class="btn btn-default">Kaydet</button>
 
-                </td>   </tr>
-            <tr><td>Sifre</td><td><input type="text" name="fsifre"  value="<?php echo  $_SESSION['fsifre']; ?>" ></td><td><div class="container">
-
-
-                        <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Durum bilgisi
-                                <span class="caret"></span></button>
-                            <ul class="dropdown-menu">
-
-                                <li><a href="filan.php">İlan ver/ara</a></li>
-                                <li><a href="mesajlar.php">Mesajlar</a></li>
+    </div>
 
 
 
-                            </ul>
-                        </div>
-                    </div></td>
-            </tr>
-            <tr><td>Firma Email</td><td><input type="email" name="fmail"  value="<?php echo  $_SESSION['fmail']; ?>" ></td>
-            </tr>
-            <tr> <td><br><button type="submit" name="zxc" class="btn btn-success">Kaydet</button></td></tr></tr>
-
-
-            </tr>
-
-        </table>
-    </fieldset>
 </form>
-
 </body>
 </html>
+
+
+
+
 
 <?php
 

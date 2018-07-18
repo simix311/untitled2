@@ -3,28 +3,25 @@ session_start();
 include ("ayar.php");
 
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="main.css" type="text/css" >
-</head>
-<body>
 
 
-<form  action=" "  method="POST">
-    <fieldset>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="main.css" type="text/css" >
+    </head>
+    <body>
 
-        <legend><strong>KULLANICI PANELİ</strong></legend>
-        <table cellspacing="3" cellpadding="3"  >
 
-
-
-            <h4><strong>Bu hesabı sil</strong></h4>
-            <tr><td>Kullancı ID</td><td><input type="text" name="ID" value="<?php echo  $_SESSION['ID']; ?>" ></td> <td><div class="container">
+    <form action=" " method="POST">
+        <div class="container">
+            <h3>Profil Bilgileri</h3>
+            <tr> <td>
+                    <div class="container">
 
 
                         <div class="dropdown">
@@ -37,12 +34,8 @@ include ("ayar.php");
                                 <li><a href="cikis.php">Çıkış yap</a></li>
                             </ul>
                         </div>
-                    </div>
-
-                </td></tr>
-            <tr><td>Kullanıcı adı</td><td> <input type="text" name="kulad" value="<?php echo  $_SESSION['kulad']; ?>" ></td>
-            </tr>
-            <tr><td>Sifre</td><td><input type="text" name="sifre"  value="<?php echo  $_SESSION['sifre']; ?>" ></td> <td><div class="container">
+                    </div></td>
+                <td>        <div class="container">
 
 
                         <div class="dropdown">
@@ -51,36 +44,65 @@ include ("ayar.php");
                             <ul class="dropdown-menu">
                                 <li><a href="basvuru.php">Başvuru yap</a></li>
                                 <li><a href="ilan.php">İlan ver/ara</a></li>
-                               <li><a href="fmesajlar.php">Mesajlar</a></li>
+                                <li><a href="fmesajlar.php">Mesajlar</a></li>
 
 
 
                             </ul>
                         </div>
-                    </div></td>
-            </tr>
-            <tr><td>Email</td><td><input type="email" name="email"  value="<?php echo  $_SESSION['email']; ?>" ></td>
-            </tr>
-            <tr><td>İsim</td><td><input type="text" name="isim"  value="<?php echo  $_SESSION['isim']; ?>" >      </td></tr>
-            <tr><td>Soyisim</td><td><input type="text" name="soyisim"  value="<?php echo  $_SESSION['soyisim']; ?>" >      </td></tr>
-            <tr><td>Yaş</td><td><input type="text" name="yas"  value="<?php echo  $_SESSION['yas']; ?>" >      </td></tr>
+                    </div>
+                </td>
 
-            <tr><td>Son pozisyon</td><td><input type="text" name="sonp" value="<?php echo $_SESSION['sonp']; ?>"></td></tr>
-            <tr><td></td> <td><br> <button type="submit" name="asd" class="btn btn-danger">sil</button> </td></tr>
 
-            <table>
-    </fieldset>
-</form>
+            </tr> <br>
 
-</body>
-</html>
+            <div class="form-group">
+                <label for="text">Kullanıcı Adı:</label>
+                <input type="text" class="form-control" id="email"    name="kulad""  value="<?php echo  $_SESSION['kulad']; ?>" >
+            </div>
+            <div class="form-group">
+                <label for="pwd">Şifre:</label>
+                <input type="text" class="form-control" id="pwd"   name="sifre" value="<?php echo  $_SESSION['sifre']; ?>   " >
+            </div><div class="form-group">
+                <label for="pwd">Email:</label>
+                <input type="email" class="form-control" id="pwd"   name="email" value=" <?php echo  $_SESSION['email']; ?>  " >
+            </div><div class="form-group">
+                <label for="pwd">İsim:</label>
+                <input type="text" class="form-control" id="pwd"   name="isim"  value=" <?php echo  $_SESSION['isim']; ?>  ">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Soyisim:</label>
+                <input type="text" class="form-control" id="pwd"   name="soyisim"  value=" <?php echo  $_SESSION['soyisim']; ?>  ">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Yaş:</label>
+                <input type="text" class="form-control" id="pwd"   name="yas"  value="  <?php echo  $_SESSION['yas']; ?>  " >
+                <div class="form-group">
+                    <label for="pwd">Son Pozisyon:</label>
+                    <input type="text" class="form-control" id="pwd"   name="sonp" value="  <?php echo  $_SESSION['sonp']; ?> " >
+                </div>
+
+
+            </div>
+            <button type="submit" name="zxc" class="btn btn-default">Sil</button>
+
+        </div>
+
+
+
+    </form>
+    </body>
+    </html>
+
+
+
 <?php
 
 if ($_POST)
 {
 
 
-    if ($conn->query("DELETE FROM uyelik WHERE ID ='".$_POST["ID"]."' "))
+    if ($conn->query("DELETE FROM uyelik WHERE kulad ='".$_POST["kulad"]."' "))
     {
         echo " <br>Üyeliginiz başarıyla silinmiştir.";
         header('REFRESH:1; URL="cikis.php" ');

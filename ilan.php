@@ -18,7 +18,7 @@ include ("ayar.php");
 
 </head>
 <body>
-<form method="post" action="ilan.php">
+<form action="" method="post">
 
 
 <div class="container">

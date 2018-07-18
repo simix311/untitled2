@@ -12,14 +12,14 @@
 <body>
 
 <div class="container">
-    <h2>Firma giris </h2>
+    <h2>Firma Giris </h2>
     <form action="firmagiris.php" method="post" >
         <div class="form-group">
-            <label for="email">Firma mail</label>
+            <label for="email">Firma Mail:</label>
             <input type="email" class="form-control"  name="fmail">
         </div>
         <div class="form-group">
-            <label for="pwd">Sifre</label>
+            <label for="pwd">Sifre:</label>
             <input type="password" class="form-control"  name="fsifre">
         </div>
 

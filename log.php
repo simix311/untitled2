@@ -10,23 +10,23 @@
 
 </head>
 <body>
-
+<form action="login.php" method="post" >
 <div class="container">
-    <h2>Üye giris </h2>
-    <form action="login.php" method="post" >
+    <h2>Üye Giris </h2>
+
         <div class="form-group">
-            <label for="email">Kullanıcı adı</label>
+            <label for="text">Kullanıcı Adı:</label>
             <input type="text" class="form-control"  name="kulad">
         </div>
         <div class="form-group">
-            <label for="pwd">Sifre</label>
+            <label for="pwd">Sifre:</label>
             <input type="password" class="form-control"  name="sifre">
         </div>
 
         <button type="submit" class="btn btn-default" name="gir">Submit</button>
-    </form>
-</div>
 
+</div>
+</form>
 </body>
 </html>
 

@@ -15,7 +15,7 @@ include ("ayar.php");
     <link rel="stylesheet " type="text/css" href="main.css">
 </head>
 <body>
-
+<form action="" method="post">
 
 
 <div class="container">
@@ -25,10 +25,10 @@ include ("ayar.php");
         <br>  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Hesap ayarları
             <span class="caret"></span></button>
         <ul class="dropdown-menu">
-            <li><a href="firmapanel.php">Profil</a></li>
-            <li><a href="fgüncel.php">Güncelle</a></li>
-            <li><a href="fhesapsil.php">Hesap sil</a></li>
-            <li><a href="fcikis.php">Çıkış yap</a></li>
+            <li><a href="panel.php">Profil</a></li>
+            <li><a href="guncelle.php">Güncelle</a></li>
+            <li><a href="hesapsil.php">Hesap sil</a></li>
+            <li><a href="cikis.php">Çıkış yap</a></li>
 
 
         </ul>
@@ -44,9 +44,9 @@ include ("ayar.php");
         <br><br>     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Durum bilgisi
             <span class="caret"></span></button>
         <ul class="dropdown-menu">
-
-            <li><a href="filan.php">İlan ver/ara</a></li>
-            <li><a href="mesajlar.php">Mesajlar</a></li>
+            <li><a href="basvuru.php">Başvuru</a></li>
+            <li><a href="ilan.php">İlan ver/ara</a></li>
+            <li><a href="fmesajlar.php">Mesajlar</a></li>
 
 
 
@@ -60,7 +60,7 @@ include ("ayar.php");
     <h2><STRONG> ONAY BEKLEYEN DURUMLAR </STRONG></h2> <BR>
 
 </div>
-
+</form>
 </body>
 
 </html>

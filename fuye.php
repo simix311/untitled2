@@ -2,6 +2,8 @@
 include("ayar.php");
 
 ?>
+
+
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -11,52 +13,42 @@ include("ayar.php");
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="main.css" type="text/css" >
     </head>
     <body>
-    <form action="" method="post">
-        <fieldset >
-            <legend>FİRMA ÜYELİK FORMU</legend>
-            <table cellpadding="3" cellspacing="3">
+   <form action="" method="post">
+    <div class="container">
+        <h2>Firma Üyelik Formu</h2>
 
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email"   name="fmail">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Kullanıcı Adı:</label>
+                <input type="text" class="form-control" id="pwd"   name="fulad">
+            </div>
 
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd"   name="fsifre">
+        </div>
 
-                <tr>
-                    <td>email</td> <td><input type="email" name="fmail"></td>
-                </tr>
-                <tr><td>kullanıcı adı</td> <td>
-                        <input type="text" name="fulad" >
-                    </td></tr>
-                <tr>
-                    <td>sifre</td> <td><input type="password" name="fsifre"></td>
-                </tr>
-
-
-                <tr>
-                    <td>e-posta bildirimleri <input type="checkbox" name="bir"></td>
-                    <td>sms bildirimleri <input type="checkbox" name="iki"></td>
-
-
-
-                <tr><td></td>
-                    <td>
-                        <div class="container">
-                            <button type="submit" class="btn btn-warning" value="üyeliği tamamla" name="üyelik">Üyeliği tamamla</button>
-                        </div>
-
-
-
-                    </td>
-                </tr>
-
-            </table>
-        </fieldset>
-    </form>
-
-
-
+            <div class="checkbox">
+                <label><input type="checkbox" name="bir"> E-posta bildirimleri</label>
+                <label><input type="checkbox" name="iki"> Sms bildirimleri</label>
+            </div>
+            <button type="submit" class="btn btn-default" name="firma" value="firma ">Submit</button>
+        </form>
+    </div>
+   </form>
     </body>
     </html>
+
+
+
+
+
+
 
 <?php
 
